@@ -1,17 +1,44 @@
-const User = {
-  name: "Samuel",
-  email: "sam@gg.dev",
+type User = {
+  name: string;
+  email: string;
+  isActive: boolean;
+};
+
+const createUser = (user: User): User => {
+  return { name: "", email: "", isActive: true };
+};
+
+createUser({ name: "", email: "", isActive: true });
+
+type User2 = {
+  readonly _id: string;
+  name: string;
+  email: string;
+  isActive: boolean;
+  credcardDeatils?: number;
+};
+
+let myUser: User2 = {
+  _id: "egoipzejo",
+  name: "Ken",
+  email: "ken@bg.com",
   isActive: true,
 };
 
-function createUser({ name: string, isPaid: boolean }) {}
+type cardNumber = {
+  cardnumber: string;
+};
 
-let newUser = { name: "Samuel", isPaid: false, email: "s@s.com" };
+type cardDate = {
+  carddate: string;
+};
 
-createUser(newUser);
+type cardDetails = cardNumber &
+  cardDate & {
+    cvv: number;
+  };
 
-function createCourse(): { name: string; price: number } {
-  return { name: "Samuel", price: 399 };
-}
+myUser.email = "s@gmail.com";
+// myUser._id="dfkjssdf"
 
 export {};
