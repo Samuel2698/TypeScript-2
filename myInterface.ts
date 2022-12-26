@@ -13,9 +13,19 @@ interface User {
   getCoupon(couponname: string, value: number): number;
 }
 
-const samuel: User = {
+interface User {
+  githubToken: string;
+}
+
+interface Admin extends User {
+  role: "admin" | "ta" | "learner";
+}
+
+const samuel: Admin = {
   email: "samuel@gmail.com",
   userId: 462643,
+  role: "admin",
+  githubToken: "github",
   dbId: 33,
   startTrail: () => {
     return "trail started";
