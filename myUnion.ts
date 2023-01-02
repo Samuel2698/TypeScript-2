@@ -36,6 +36,15 @@ function getDbId(id: number | string) {
   }
 }
 
+function getMyId(id: number | string) {
+  if (typeof id === "string") {
+    id.toUpperCase();
+  }
+  if (typeof id === "number") {
+    id.toFixed();
+  }
+}
+
 //* array
 
 const data: number[] = [1, 2, 3];

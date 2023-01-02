@@ -11,3 +11,10 @@ var myUser = {
     isActive: true
 };
 myUser.email = "s@gmail.com";
+var myUser3 = {
+    _id: 546266,
+    name: "Lee",
+    email: "lee@bg.com",
+    isActive: true
+};
+myUser.email = "lee@gmail.com";

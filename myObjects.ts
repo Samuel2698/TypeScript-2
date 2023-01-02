@@ -15,7 +15,7 @@ type User2 = {
   name: string;
   email: string;
   isActive: boolean;
-  credcardDeatils?: number;
+  credcardDetails?: number;
 };
 
 let myUser: User2 = {
@@ -40,5 +40,22 @@ type cardDetails = cardNumber &
 
 myUser.email = "s@gmail.com";
 // myUser._id="dfkjssdf"
+
+type User3 = {
+  readonly _id: number;
+  name: string;
+  email: string;
+  isActive: boolean;
+  credcardDetails?: string;
+};
+
+let myUser3: User3 = {
+  _id: 467353,
+  name: "Lee",
+  email: "lee@bg.com",
+  isActive: true,
+};
+
+myUser3.isActive = false;
 
 export {};
